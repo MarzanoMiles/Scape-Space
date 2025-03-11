@@ -1,0 +1,51 @@
+/* Section styling */
+.details-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.details-section h2 {
+    color: orange;
+    margin-bottom: 20px;
+}
+
+/* Container for the cards */
+.details-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 3D effect cards */
+.details-card {
+    width: 250px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    /*background: rgba(255, 255, 255, 0.1);*/
+    background: linear-gradient(135deg, hsla(197, 16%, 43%, 0.5), hsla(0, 0%, 0%, 0.3));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 5px rgba(255, 139, 51, 0.79);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3D hover effect */
+.details-card:hover {
+    transform: perspective(1000px) rotateY(10deg) scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
